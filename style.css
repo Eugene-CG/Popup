@@ -1,3 +1,6 @@
+:root {
+  --full-size: 100%;
+}
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +9,7 @@
 }
 .wrapper {
   height: 300vh;
-  min-width: 100%;
+  min-width: var(--full-size);
   background-image: url(./img/gitlogoforme.jpeg);
 }
 .header {
@@ -17,26 +20,26 @@
   justify-content: space-between;
 }
 .menu {
-  height: 100%;
+  height: var(--full-size);
   width: 30%;
 }
 .menu-list {
-  height: 100%;
-  width: 100%;
+  height: var(--full-size);
+  width: var(--full-size);
   position: relative;
   display: flex;
   justify-content: space-around;
 }
 .menu-list li {
-  height: 100%;
+  height: var(--full-size);
   width: 25%;
   margin: 0 0.3em;
   position: relative;
   display: block;
 }
 .menu-list li a {
-  height: 100%;
-  width: 100%;
+  height: var(--full-size);
+  width: var(--full-size);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -44,13 +47,13 @@
   top: 0;
 }
 .menu-list li img {
-  height: 100%;
-  width: 100%;
+  height: var(--full-size);
+  width: var(--full-size);
   border-radius: 20%;
 }
 .menu-list > li input {
-  height: 100%;
-  width: 100%;
+  height: var(--full-size);
+  width: var(--full-size);
   position: absolute;
   bottom: 0;
   left: 0;
@@ -73,7 +76,7 @@
 .more {
   height: 0;
   position: absolute;
-  top: 100%;
+  top: var(--full-size);
   left: -30%;
 }
 .popup li,
