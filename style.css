@@ -185,7 +185,7 @@
     display: none;
     position: absolute;
     top: calc(var(--max-size-percent) + 1em);
-    left: -300px;
+    left: -300%;
   }
   .popup img {
     display: none;
