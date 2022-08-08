@@ -103,7 +103,12 @@
   margin-right: var(--scrollbar-size);
 }
 .input-more-span {
-  color: transparent;
+  height: var(--header-height);
+  padding-left: 20%;
+  display: block;
+  line-height: 1;
+  font-size: 3em;
+  color: black;
 }
 .more__checkbox {
   background: rgba(9, 226, 255, 0.4);
@@ -195,4 +200,10 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+@media (max-width: 657px) {
+  .input-more-span {
+    padding-left: 5%;
+    font-size: 2em;
+  }
 }
