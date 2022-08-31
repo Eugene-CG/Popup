@@ -1,7 +1,7 @@
 $max-percent: 100%;
 $black-color: #000;
 $white-color: #fff;
-
+$icon-size: 30px;
 %custom-checkbox {
   width: $max-percent;
   position: absolute;
@@ -41,23 +41,23 @@ body {
   margin-top: 2em;
 }
 .logo {
-  img {
+  & img {
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 1px 2px $white-color, 0 0 1px 4px $black-color;
   }
 }
 .nav {
-  ul {
+  & ul {
     list-style: none;
   }
-  a {
+  & a {
     text-decoration: none;
     color: $black-color;
   }
-  img {
-    width: 30px;
-    height: 30px;
+  & img {
+    width: $icon-size;
+    height: $icon-size;
   }
 }
 .nav-ul {
@@ -68,13 +68,13 @@ body {
 }
 .container-popup {
   position: relative;
-  .checkbox-popup {
+  & .checkbox-popup {
     @extend %custom-checkbox;
   }
-  .popup {
+  & .popup {
     display: none;
   }
-  .checkbox-popup:checked {
+  & .checkbox-popup:checked {
     + .popup {
       right: 0;
       scrollbar-gutter: stable;
@@ -87,20 +87,20 @@ body {
 .container-more-popup {
   grid-column: -1/ 2;
   position: relative;
-  .checkbox-more-popup-input {
+  & .checkbox-more-popup-input {
     @extend %custom-checkbox;
   }
-  .checkbox-more-popup-label-img {
+  & .checkbox-more-popup-label-img {
     transform: rotate(-90deg);
   }
-  .more-popup {
+  & .more-popup {
     display: none;
   }
-  .checkbox-more-popup-input:checked {
+  & .checkbox-more-popup-input:checked {
     ~ .more-popup {
       height: 0px;
       @extend %grid-popups;
-      left: -30px;
+      left: -$icon-size;
     }
     + .checkbox-more-popup-label {
       img {
