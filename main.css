@@ -1,0 +1,152 @@
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .nav .nav-ul .container-popup .checkbox-popup, .header .nav .nav-ul .container-popup .popup .container-more-popup .checkbox-more-popup-input {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.header .nav .nav-ul .container-popup .popup, .header .nav .nav-ul .container-popup .popup .container-more-popup .more-popup {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  margin: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.header ul {
+  list-style: none;
+}
+
+.header .logo img {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 1px 3px #000;
+          box-shadow: 0 0 1px 3px #000;
+  cursor: pointer;
+}
+
+.header .nav .nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1em;
+}
+
+.header .nav .nav-ul li .nav-ul-link {
+  text-decoration: none;
+}
+
+.header .nav .nav-ul .container-popup {
+  position: relative;
+}
+
+.header .nav .nav-ul .container-popup .popup {
+  height: 250px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  overflow-x: hidden;
+}
+
+.header .nav .nav-ul .container-popup .popup img {
+  width: 42px;
+  height: 42px;
+}
+
+.header .nav .nav-ul .container-popup .popup li {
+  width: 50px;
+  height: 64.5px;
+  padding: 0.25em;
+}
+
+.header .nav .nav-ul .container-popup .popup .container-more-popup {
+  position: relative;
+  padding: 0;
+  padding-left: 9px;
+  left: 100%;
+}
+
+.header .nav .nav-ul .container-popup .popup .container-more-popup .checkbox-more-popup-label img {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.header .nav .nav-ul .container-popup .popup .container-more-popup .more-popup {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: -100%;
+}
+
+.header .nav .nav-ul .container-popup .popup .container-more-popup .checkbox-more-popup-input:checked {
+  position: absolute;
+  top: 100px;
+}
+
+.header .nav .nav-ul .container-popup .popup .container-more-popup .checkbox-more-popup-input:checked .container-more-popup {
+  height: 1px;
+}
+
+.header .nav .nav-ul .container-popup .popup .container-more-popup .checkbox-more-popup-input:checked ~ .more-popup {
+  margin-top: -130%;
+  display: -ms-grid;
+  display: grid;
+  overflow-y: auto;
+}
+
+.header .nav .nav-ul .container-popup .popup .container-more-popup .checkbox-more-popup-input:checked + .checkbox-more-popup-label {
+  position: relative;
+  top: 200%;
+}
+
+.header .nav .nav-ul .container-popup .popup .container-more-popup .checkbox-more-popup-input:checked + .checkbox-more-popup-label img {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.header .nav .nav-ul .container-popup .checkbox-popup:checked + .popup {
+  display: -ms-grid;
+  display: grid;
+}
+/*# sourceMappingURL=main.css.map */
