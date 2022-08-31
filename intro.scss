@@ -83,9 +83,12 @@ body {
       @extend %grid-popups;
     }
   }
+  & li {
+    margin: 0.5em;
+  }
 }
 .container-more-popup {
-  grid-column: -1/ 2;
+  grid-column: -2/ 2;
   position: relative;
   & .checkbox-more-popup-input {
     @extend %custom-checkbox;
@@ -95,6 +98,7 @@ body {
   }
   & .more-popup {
     display: none;
+    margin-left: -36px;
   }
   & .checkbox-more-popup-input:checked {
     ~ .more-popup {
