@@ -1,0 +1,125 @@
+.container-popup .checkbox-popup, .container-more-popup .checkbox-more-popup-input {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.container-popup .checkbox-popup:checked + .popup, .container-more-popup .checkbox-more-popup-input:checked ~ .more-popup {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  position: absolute;
+  -webkit-box-shadow: 0 0 3px #000;
+          box-shadow: 0 0 3px #000;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+}
+
+.wrapper {
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 2em;
+}
+
+.logo img {
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 1px 2px #fff, 0 0 1px 4px #000;
+          box-shadow: 0 0 1px 2px #fff, 0 0 1px 4px #000;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav img {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 900;
+  font-size: 1.5em;
+  gap: 1em;
+}
+
+.container-popup {
+  position: relative;
+}
+
+.container-popup .popup {
+  display: none;
+}
+
+.container-popup .checkbox-popup:checked + .popup {
+  right: 0;
+  scrollbar-gutter: stable;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.container-more-popup {
+  grid-column: -1/ 2;
+  position: relative;
+}
+
+.container-more-popup .checkbox-more-popup-label-img {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.container-more-popup .more-popup {
+  display: none;
+}
+
+.container-more-popup .checkbox-more-popup-input:checked ~ .more-popup {
+  height: 0px;
+  left: -30px;
+}
+
+.container-more-popup .checkbox-more-popup-input:checked + .checkbox-more-popup-label img {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+/*# sourceMappingURL=intro.css.map */
