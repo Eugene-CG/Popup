@@ -1,0 +1,20 @@
+@mixin custom-checkbox($position) {
+  width: $max-percent;
+  position: $position;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  appearance: none;
+}
+@mixin theme($dark-mode: true) {
+  @if $dark-mode {
+    background-color: $black-color;
+    * {
+      color: $white-color;
+    }
+    .popup {
+      background-color: $white-color;
+    }
+  }
+}

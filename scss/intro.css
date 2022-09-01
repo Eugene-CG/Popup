@@ -7,18 +7,6 @@
           box-sizing: border-box;
 }
 
-.container-popup .checkbox-popup, .container-more-popup .checkbox-more-popup-input {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
 .container-popup .checkbox-popup:checked + .popup, .container-more-popup .checkbox-more-popup-input:checked ~ .more-popup {
   display: -ms-grid;
   display: grid;
@@ -31,10 +19,12 @@
 
 body {
   width: 100vw;
+  height: 100vh;
 }
 
 .wrapper {
   min-width: 100%;
+  min-height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,6 +78,18 @@ body {
   position: relative;
 }
 
+.container-popup .checkbox-popup {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
 .container-popup .popup {
   display: none;
 }
@@ -103,9 +105,27 @@ body {
   margin: 0.5em;
 }
 
+.container-popup li :hover {
+  -webkit-transition: 0.5s all ease-in-out;
+  transition: 0.5s all ease-in-out;
+  opacity: 0.5;
+}
+
 .container-more-popup {
   grid-column: -2/ 2;
   position: relative;
+}
+
+.container-more-popup .checkbox-more-popup-input {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 
 .container-more-popup .checkbox-more-popup-label-img {
@@ -126,5 +146,51 @@ body {
 .container-more-popup .checkbox-more-popup-input:checked + .checkbox-more-popup-label img {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.theme-label::after {
+  content: "Dark";
+}
+
+.theme-ld {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 0;
+}
+
+.theme-ld:checked ~ * {
+  background-color: #000;
+}
+
+.theme-ld:checked ~ * * {
+  color: #fff;
+}
+
+.theme-ld:checked ~ * .popup {
+  background-color: #fff;
+}
+
+.theme-ld:checked ~ * .theme-label::after {
+  content: "light";
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 5em;
 }
 /*# sourceMappingURL=intro.css.map */

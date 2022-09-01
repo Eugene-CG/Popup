@@ -1,16 +1,8 @@
 @import "./resets";
 @import "./variables";
 @import "./functions";
-
-%custom-checkbox {
-  width: $max-percent;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  appearance: none;
-}
+@import "./mixin";
+// не розглянуто extends .className, коли елемент наслідує стилі іншого елементу
 %grid-popups {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -19,9 +11,12 @@
 }
 body {
   width: calcWidth(max-viewportW); //functions
+  height: calcWidth(max-viewportH); //functions
 }
 .wrapper {
   min-width: $max-percent;
+  min-height: $max-percent;
+
   display: flex;
   flex-direction: column;
 }
@@ -60,7 +55,7 @@ body {
 .container-popup {
   position: relative;
   & .checkbox-popup {
-    @extend %custom-checkbox;
+    @include custom-checkbox(absolute); // mixin
   }
   & .popup {
     display: none;
@@ -76,13 +71,17 @@ body {
   }
   & li {
     margin: 0.5em;
+    :hover {
+      transition: 0.5s all ease-in-out;
+      opacity: 0.5;
+    }
   }
 }
 .container-more-popup {
   grid-column: -2/ 2;
   position: relative;
   & .checkbox-more-popup-input {
-    @extend %custom-checkbox;
+    @include custom-checkbox(absolute); // mixin
   }
   & .checkbox-more-popup-label-img {
     transform: rotate(-90deg);
@@ -103,4 +102,27 @@ body {
       }
     }
   }
+}
+.theme-label {
+  &::after {
+    content: "Dark";
+  }
+}
+.theme-ld {
+  @include custom-checkbox(absolute);
+  width: 0;
+  &:checked {
+    & ~ * {
+      @include theme($dark-mode: true);
+      .theme-label::after {
+        content: "light";
+      }
+    }
+  }
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
 }
