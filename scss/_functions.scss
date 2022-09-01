@@ -1,0 +1,3 @@
+@function calcWidth($width) {
+  @return map-get($element-max-width, $width);
+}

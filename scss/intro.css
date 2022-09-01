@@ -1,3 +1,12 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .container-popup .checkbox-popup, .container-more-popup .checkbox-more-popup-input {
   width: 100%;
   position: absolute;
@@ -18,15 +27,6 @@
   position: absolute;
   -webkit-box-shadow: 0 0 3px #000;
           box-shadow: 0 0 3px #000;
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 body {
@@ -52,6 +52,7 @@ body {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin-top: 2em;
+  font-weight: 900;
 }
 
 .logo img {
@@ -79,7 +80,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-weight: 900;
   font-size: 1.5em;
   gap: 1em;
 }

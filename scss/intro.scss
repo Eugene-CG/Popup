@@ -1,7 +1,7 @@
-$max-percent: 100%;
-$black-color: #000;
-$white-color: #fff;
-$icon-size: 30px;
+@import "./resets";
+@import "./variables";
+@import "./functions";
+
 %custom-checkbox {
   width: $max-percent;
   position: absolute;
@@ -14,20 +14,11 @@ $icon-size: 30px;
 %grid-popups {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  //   grid-template-rows: repeat(3, auto) 50px;
   position: absolute;
   box-shadow: 0 0 3px $black-color;
 }
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 body {
-  width: 100vw;
+  width: calcWidth(max-viewportW); //functions
 }
 .wrapper {
   min-width: $max-percent;
@@ -39,6 +30,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin-top: 2em;
+  font-weight: map-get($font-weitghts, strong); //maps
 }
 .logo {
   & img {
@@ -62,7 +54,6 @@ body {
 }
 .nav-ul {
   display: flex;
-  font-weight: 900;
   font-size: 1.5em;
   gap: 1em;
 }
@@ -112,8 +103,4 @@ body {
       }
     }
   }
-}
-.more-popup {
-}
-.main {
 }
